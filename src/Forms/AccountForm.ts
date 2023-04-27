@@ -5,6 +5,7 @@ export class AccountForm {
   static onWebsiteChanged(context: Xrm.Events.EventContext): void {
     const formContext = context.getFormContext();
     const websiteAttribute = formContext.getAttribute("websiteurl");
+    if (websiteAttribute.getValue() == null) return;
     const websiteRegex = /^(https?:\/\/)?([\w\d]+\.)?[\w\d]+\.\w+\/?.+$/g;
     let isValid = true;
     if (websiteAttribute && websiteAttribute.getValue()) {
