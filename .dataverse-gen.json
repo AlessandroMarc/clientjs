@@ -1,0 +1,11 @@
+{
+    "entities":[],
+    "actions":[],
+    "functions":[],
+    "generateIndex": true,
+    "generateFormContext": false,
+    "generateEntityTypes": true,
+    "output":{
+        "outputRoot": "./src/dataverse-gen"
+    }
+}
