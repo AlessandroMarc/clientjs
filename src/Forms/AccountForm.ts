@@ -2,6 +2,7 @@ export class AccountForm {
   static async onload(context: Xrm.Events.EventContext): Promise<void> {
     context.getFormContext().getAttribute("websiteurl").addOnChange(AccountForm.onWebsiteChanged);
   }
+  
   static onWebsiteChanged(context: Xrm.Events.EventContext): void {
     const formContext = context.getFormContext();
     const websiteAttribute = formContext.getAttribute("websiteurl");
